@@ -1,0 +1,7 @@
+<p>formulario-normal works!</p>
+Nombre:<input type="text" [(ngModel)] = "nombre"/>
+<button (click)="enviar()">Enviar</button>
+
+@for (nom of nombres; track nom) {
+    <p>{{nom}}</p>
+}
