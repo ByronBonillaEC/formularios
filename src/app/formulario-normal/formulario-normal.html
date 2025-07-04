@@ -1,7 +1,9 @@
-<p>formulario-normal works!</p>
-Nombre:<input type="text" [(ngModel)] = "nombre"/>
-<button (click)="enviar()">Enviar</button>
+<form (ngSubmit)="enviar()" #miForm="ngForm">
+    <p>formulario-normal works!</p>
+    Nombre:<input type="text" [(ngModel)] = "nombre"/>
+    <input type="submit" [disabled]="miForm.invalid" value="Enviar"/>
 
-@for (nom of nombres; track nom) {
-    <p>{{nom}}</p>
-}
+    @for (nom of nombres; track nom) {
+        <p>{{nom}}</p>
+    }
+</form>

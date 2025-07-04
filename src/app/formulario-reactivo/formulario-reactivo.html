@@ -2,8 +2,11 @@
 <form [formGroup]="profileForm" (ngSubmit)="enviar()">
     <p>formulario-reactivo works!</p>
     <label>Nombre:
-        <input type="text" name="correo">
+        <input type="text" formControlName="correo">
     </label>
     <input type="submit" [disabled]="!profileForm.valid" value="Enviar"/>
 
+    @for (correo of correos; track correo) {
+        <p>{{correo}}</p>
+    }
 </form>
