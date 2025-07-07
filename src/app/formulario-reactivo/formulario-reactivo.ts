@@ -19,8 +19,7 @@ export class FormularioReactivo {
     if (this.profileForm.value.correo != ''){ 
       if (this.profileForm.value.correo){
         this.correos.push(this.profileForm.value.correo);
-        this.profileForm.value.correo = '';
-        console.log(this.correos);
+        this.profileForm.value.correo = '';        
       }
     }
   }

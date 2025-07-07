@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { FormularioNormal } from './formulario-normal/formulario-normal';
-import { FormularioReactivo } from './formulario-reactivo/formulario-reactivo';
+//import { FormularioReactivo } from './formulario-reactivo/formulario-reactivo';
 
 export const routes: Routes = [
     {
@@ -10,8 +10,10 @@ export const routes: Routes = [
     },
     {
         path : "reactivo",
-        title : "Formulario rEACTIVO",
-        component : FormularioReactivo
+        title : "Formulario Reactivo",        
+        loadComponent() {
+            return import('./formulario-reactivo/formulario-reactivo')
+            .then(m => m.FormularioReactivo)
+        },
     }
-
 ];
